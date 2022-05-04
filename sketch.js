@@ -31,7 +31,8 @@ world = engine.world;
   
   
 //create a ground
-ground = Bodies.rectangle(200,390,400,20);
+ground = Bodies.rectangle(200,390,400,20,ground_options);
+World.add(world,ground);
 //add to world
 
   ball = Bodies.circle(100,10,20,ball_options);
@@ -54,7 +55,7 @@ function draw()
 
   ellipse(ball.position.x,ball.position.y,20);
   //write a rectangle function to display ground.
- 
+  rect(ground.position.x,ground.position.y,400,20);
 
 
   
